@@ -53,7 +53,10 @@ section.section1{
 }
 section.section2{
     grid-area: section2;
-    background-color: #006847;
+    background: #11998e;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -272,7 +275,10 @@ section.section3{
 .donde-container{
     width: 60%;
     height: 10%;
-    background-color: #006847;
+    background: #11998e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+;
     color: #FBF3E6;
     font-size: 1rem;
     margin: 10%;
@@ -293,14 +299,17 @@ section.section3{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("https://media.istockphoto.com/vectors/italian-food-pizza-sketch-doodle-seamless-pattern-wallpaper-vector-id1187426116?k=20&m=1187426116&s=170667a&w=0&h=9AXiiZk85jm4x7Rb7aEzz6nvv2sfebUsl2NMWQFvCiE=");
+    background-image: url("https://media.istockphoto.com/vectors/italian-food-pizza-sketch-doodle-seamless-pattern-wallpaper-vector-id1187426116?k=20&m=1187426116&s=170667a&w=0&h=9AXiiZk85jm4x7Rb7aEzz6nvv2sfebUsl2NMWQFvCiE=") !important;
     opacity: 0.8;
 }
 .hola-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #006847;
+    background: #11998e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+;
     width: 60%;
     height: 50%;
     padding: 1%;
@@ -329,7 +338,10 @@ section.section3{
 }
 .caja-verde{
     border-style: none;
-    background-color: #006847;
+    background: #11998e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+;
     opacity: 0.6;
     margin: 1%;
     font-family: 'Spartan',sans-serif;
@@ -524,7 +536,9 @@ section.section3{
 /*Defino nuevos section para nuestraspizzas.html*/
 .section1-np{
     grid-area: section1-np;
-    background-color: rgb(181, 22, 34, 0.8);
+    background: #CB356B;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #BD3F32, #CB356B);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #BD3F32, #CB356B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -535,7 +549,10 @@ section.section3{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: rgb(181, 22, 34, 0.8);
+    background-color: rgb(181, 22, 34, 0.8);background: #CB356B;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #BD3F32, #CB356B);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #BD3F32, #CB356B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
 }
 /*Estilos para nuestraspizzas.html*/
 .np-container{
@@ -555,6 +572,13 @@ section.section3{
 }
 .np-tamaño{
     width: 50%;
+    /*Transicion*/
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+.np-tamaño:hover{
+    width: 60%;
 }
 .linea{
     background-color: #FBF3E6;
@@ -785,13 +809,15 @@ section.section3{
     padding: 2%;
     width: 90%;
     color: #252525;
+    /*Transformacion*/
+    
 }
 .border-verde{
     border-top: 2px solid #006847;
     border-bottom: 2px solid #006847;
 }
 .imagen-tamaño{
-    width: 100%;
+    width: 80%;
 }
 .lorem-estilo{
     padding: 2%;
