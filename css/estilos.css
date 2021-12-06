@@ -1,0 +1,836 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Ajuste navegadores*/
+html { 
+    line-height: 1.15; /* Correct the line height in all browsers */ 
+    -webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS. */ 
+    }
+#grid-container{
+    display: grid;
+    /*Mobile first*/
+    grid-template-areas: 
+    "header"
+    "nav"
+    "section1"
+    "section2"
+    "section3"
+    "footer"
+    ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 3% 40% 20% 20% auto;
+    width: 100%;
+    height: 200vh;
+    font-family: 'Spartan',sans-serif;
+}
+
+/*Definiendo áreas de la grilla*/
+.header{
+    grid-area: header;
+    background-color: #FFC61A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav{
+    grid-area: nav;
+    background-color: #FFC61A;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: center;
+    padding-bottom: 2%;
+
+}
+section.section1{
+    grid-area: section1;
+    background-color: #FBF3E6;
+    width: 100%;
+    overflow: hidden;
+}
+section.section2{
+    grid-area: section2;
+    background-color: #006847;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section.section3{
+    grid-area: section3;
+    background-color: #B51622;
+    display: flex;
+    justify-content: space-around;
+}
+.footer{
+    grid-area: footer;
+    background-color: #FFC61A;
+    display: flex;
+    justify-content: space-between;
+}
+/*Estilos items header*/
+.img-container-logo{
+    width: 100%;
+    margin-top: 2%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.img-logo{
+    width: 50%;
+}
+.img-gourmet{
+    width: 40%;
+}
+.img-container-gourmet{
+    width: 100%;
+    margin-top: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*Estilos barra de navegación*/
+.links{
+    text-decoration: none;
+    font-weight: 500;
+    color: #252525;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.links:hover{
+    color: #B51622;
+    border-top: 1px solid #B51622;
+    border-bottom: 1px solid #B51622;
+}
+/*Estilos video+slogan*/
+.slogan-container{
+    position: absolute;
+    width: 96%;
+    height: 20%;
+    z-index: 1;
+    top: 35%;
+    left: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #B51622;
+    border: 3px solid #FBF3E6;
+}
+.slogan{
+    color: #FBF3E6;
+    padding-top: 3%;
+    padding-left: 3%;
+    font-size: 1.5rem;
+}
+.slogan-amarillo{
+    color: #FFC61A;
+}
+.video-container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.video-tamaño{
+    width: 100%;
+    height: 100%;
+}
+/*Seccion promociones*/
+.img-tamañoPromo{
+    width: 70%;
+    margin-top: 50%;
+    margin-bottom: 50%;
+}
+.promos-container{
+    width: 80%;
+    height: 80%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+.verMas-container{
+    width: 70%;
+    background-color: #FBF3E6;
+    margin-bottom: 2%;
+    padding: 1%;
+}
+.nav-verMas{
+    text-decoration: none;
+    color: #006847;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.verMas-container:hover{
+    border:2px solid #B51622;
+}
+/*Seccion nosotros*/
+.pizza-container{
+    width: 30%;
+    height: 55%;
+    margin-top: 15%;
+    overflow: hidden;
+}
+.tamaño-pizza{
+    width: 100%;
+    border: 1px solid #FBF3E6;
+}
+.Gourmet-container{
+    width: 20%;     
+    font-size: 100%;
+    color: #FBF3E6;
+    margin-top: 15%;
+}
+.nos-container{
+    width: 35%;
+    background-color: #FBF3E6;
+    height: 10%;
+    margin-top: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav_nos{
+    text-decoration: none;
+    color: #B51622;
+}
+.nos-container:hover{
+    border:2px solid #006847;
+}
+/*Footer*/
+.form-container{
+    width: 50%;
+    margin: 0.5%;
+    color: #B51622;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.centrar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cr-container{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: #252525;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+.caja-mail{
+    width: 100%;
+    background-color: inherit;
+    border-bottom: 1px solid #B51622;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 2%;
+    font-size: 1rem;
+    font-family: 'Spartan',sans-serif;
+    color: black;
+    padding: 1%
+}
+::placeholder{
+    color: #FBF3E6  ;
+    opacity: 0.6;
+}
+.boton{
+    border-style: none;
+    background-color:inherit;
+    border-bottom: 1px solid #B51622;
+    margin-top: 2%;
+    color: #B51622;
+    font-size: 1rem;
+    font-family: 'Spartan',sans-serif;
+}
+.boton:hover{
+    font-size: 1.2rem;
+}
+/*Comienzo con estilos de contacto.html*/
+.section1-contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.donde-container{
+    width: 60%;
+    height: 10%;
+    background-color: #006847;
+    color: #FBF3E6;
+    font-size: 1rem;
+    margin: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mapa-container{
+    width: 80%;
+    height: 30%;
+    border: 2px solid #006847;
+}
+.tamaño-mapa{
+    width: 100%;
+    height: 100%;
+}
+.section2-contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://media.istockphoto.com/vectors/italian-food-pizza-sketch-doodle-seamless-pattern-wallpaper-vector-id1187426116?k=20&m=1187426116&s=170667a&w=0&h=9AXiiZk85jm4x7Rb7aEzz6nvv2sfebUsl2NMWQFvCiE=");
+    opacity: 0.8;
+}
+.hola-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #006847;
+    width: 60%;
+    height: 50%;
+    padding: 1%;
+    font-size: 1rem;
+}
+.section3-contacto{
+    background-color: #FBF3E6 !important;
+    border: 1px dashed #006847;
+}
+.form-container-contacto{
+    width: 60%;
+    height: 100%;
+    padding: 1%;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #006847;
+    color: #252525;
+}
+.form-contacto{
+    font-size: 1rem;
+}
+.tamaño-completo{
+    width: 100%;
+}
+.caja-verde{
+    border-style: none;
+    background-color: #006847;
+    opacity: 0.6;
+    margin: 1%;
+    font-family: 'Spartan',sans-serif;
+    font-size: 1rem;
+}
+.boton-contacto{
+    border-style: none;
+    background-color: inherit;
+    border: 1px solid #006847;
+    color: #252525;
+    font-family: 'Spartan',sans-serif;
+    font-size: 0.8rem;
+}
+.boton-contacto:hover{
+    font-size: 0.9rem;
+}
+
+
+/*Responsive*/
+/*1° Tablet:2 columnas 5 filas*/
+@media screen and (min-width:768px) {
+    #grid-container{
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 10% 40% 20% 20% auto;
+        grid-template-areas: 
+        "nav header"
+        "section1 section1"
+        "section2 section2"
+        "section3 section3"
+        "footer footer"
+        ;
+    }
+    /*Header*/
+    .header{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .img-container-logo{
+        height: 100%;
+        margin-top: 0%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .img-logo{
+        width: 70%;
+    }
+    .img-gourmet{
+        width: 70%;
+    }
+    .img-container-gourmet{
+        width: 100%;
+        height: 100%;
+        margin-top: 0%;
+        margin-bottom: 2%;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+    }
+    /*Video + slogan*/
+    .slogan-container{
+        width: 40%;
+        height: 25%;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .slogan{
+        font-size: 2rem;
+    }
+    /*Seccion promociones*/
+    .img-tamañoPromo{
+        width: 30%;
+        margin-right: 2%;
+        margin-left: 2%;
+    }
+    .promos-container{
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .verMas-container{
+        width: 35%;
+    }
+    /*Seccion nosotros*/
+    .pizza-container{
+        height: 70%;
+        margin-top: 10%;
+}
+    .Gourmet-container{
+        width: 20%;     
+        font-size: 150%;
+        margin-top: 15%;
+}
+    .nos-container{ 
+        margin-top: 40%;
+        width: 20%;
+    }
+    /*Comienzan estilos de contacto*/
+    .hola-container{
+        font-size: 1.5rem;
+    }
+    .form-container-contacto{
+        width: 40%;
+    }
+}
+/*2° Desktop:3 columnas 3 filas*/
+@media screen and (min-width:1200px) {
+    #grid-container{   
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 10% 40% 20% 20% auto;
+        grid-template-areas:
+        "nav header header"
+        "section1 section1 section1"
+        "section2 section2 section2"
+        "section3 section3 section3"
+        "footer footer footer"
+        ;
+    }
+    /*Header*/
+    .img-logo{
+        width: 60%;
+    }
+    /*Video + slogan*/
+    .video-container{
+        width: 100%;
+        height: fit-content;
+    }
+    .slogan-container{
+        width: 30%;
+        height: 40%;
+        top: 50%;
+    }
+    .slogan{
+        font-size: 2.5rem;
+    }
+    /*Seccion promociones*/
+    .img-tamañoPromo{
+        width: 15%;
+    }
+    .promos-container{
+        width: 100%;
+        height: 100%;
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
+    }
+    .verMas-container{
+        width: 30%;
+        padding-bottom: 0.5%;
+        padding-top: 0.5%;
+        margin-bottom: 0.2%;
+    }
+    /*Seccion nosotros*/
+    .pizza-container{
+        height: 98%;
+        width: 20%;
+        margin-top: 0.2%;
+    }
+    .Gourmet-container{
+        width: 20%;     
+        font-size: 150%;
+        margin-top: 1%;
+    }
+    .nos-container{ 
+        width: 15%;
+        margin-top: 8%;
+    }
+    /*Footer*/
+    .form-container{
+        font-size: 1.2rem;
+    }
+    /*Comienzo estilos contacto*/
+    .donde-container{
+        height: 30%;
+        width: 40%;
+        font-size: 1.5rem;
+        margin: 1%;
+    }
+    .mapa-container{
+        height: 60%;
+    }
+    .form-container-contacto{
+        width: 20%;
+    }
+    .caja-verde{
+        font-size: 1rem;
+    }
+}
+
+/*Defino nuevos section para nuestraspizzas.html*/
+.section1-np{
+    grid-area: section1-np;
+    background-color: rgb(181, 22, 34, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section2-np{
+    grid-area: section2-np;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(181, 22, 34, 0.8);
+}
+/*Estilos para nuestraspizzas.html*/
+.np-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.np-texto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #FBF3E6;
+}
+.np-tamaño{
+    width: 50%;
+}
+.linea{
+    background-color: #FBF3E6;
+    width: 50%;
+    height: 1%;
+    color: none;
+}
+
+/*Maquetando con grid nuestras pizzas*/
+    #grid-container-nuestrasPizzas{
+        display: grid;
+        /*Mobile first*/
+        grid-template-areas: 
+        "header"
+        "nav"
+        "section1-np"
+        "section2-np"
+        "footer"
+        ;
+        grid-template-columns: 1fr;
+        grid-template-rows: 13.3% 4% 20% 60% auto;
+        width: 100%;
+        height: 150vh;
+        font-family: 'Spartan',sans-serif;
+    }
+
+    /*Responsive*/
+/*1° Tablet:2 columnas 5 filas*/
+@media screen and (min-width:768px) {
+    #grid-container-nuestrasPizzas{
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 13.3% 20% 60% auto;
+        grid-template-areas: 
+        "nav header"
+        "section1-np section1-np"
+        "section2-np section2-np"
+        "footer footer"
+        ;
+    }
+    .section2-np{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .np-texto{
+        width: 60%;
+        font-size: 1.5rem;
+    }
+    .np-tamaño{
+        width: 70%;
+    }
+}
+
+/*2° Desktop:3 columnas 3 filas*/
+@media screen and (min-width:1200px) {
+    #grid-container-nuestrasPizzas{   
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 13.3% 20% 53% auto;
+        grid-template-areas:
+        "nav header header"
+        "section1-np section1-np section1-np"
+        "section2-np section2-np section2-np"
+        "footer footer footer"
+        ;
+    }
+    .np-texto{
+        width: 40%;
+        font-size: 2rem;
+    }
+    .np-tamaño{
+        width: 90%;
+    }
+}
+
+/*Maquetando con grid promociones.html*/
+#grid-container-promos{
+    display: grid;
+    /*Mobile first*/
+    grid-template-areas: 
+    "header"
+    "nav"
+    "section1-p"
+    "section2-p"
+    "section3-p"
+    "footer"
+    ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 12% 3% 35% 10% 35% auto;
+    width: 100%;
+    height: 200vh;
+    font-family: 'Spartan',sans-serif;
+}
+
+/*Defino nuevas áreas section*/
+.section1-p{
+    grid-area: section1-p;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: hidden;
+    background-color: #FBF3E6;
+    padding: 10%;
+}
+.section2-p{
+    grid-area: section2-p;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FBF3E6;
+    overflow: hidden;
+}
+.section3-p{
+    grid-area: section3-p;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: hidden;
+    background-color: #FBF3E6;
+    padding: 10%;
+}
+.container-chepromo{
+    width: 60%;
+    height: 30%;
+}
+.tamaño-chepromo{
+    width: 100%;
+}
+.container-elegi{
+    background-color: #B51622;
+    padding: 3%;
+    width: 100%;
+    height: auto;
+    color: #FBF3E6;
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Responsive*/
+/*1° Tablet:2 columnas 5 filas*/
+@media screen and (min-width:768px) {
+    #grid-container-promos{
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 12% 35% 10% 35% auto;
+        grid-template-areas: 
+        "nav header"
+        "section1-p section1-p"
+        "section2-p section2-p"
+        "section3-p section3-p"
+        "footer footer"
+        ;
+    }
+    .section1-p{
+        flex-direction: row;
+    }
+    .section3-p{
+        flex-direction: row;
+    }
+    .container-chepromo{
+        width: 40%;
+        height: 20%;
+    }
+    .container-elegi{
+        font-size: 2rem;
+    }
+}
+/*2° Desktop:3 columnas 5 filas*/
+@media screen and (min-width:1200px) {
+    #grid-container-promos{   
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 12% 35% 10% 35% auto;
+        grid-template-areas:
+        "nav header header"
+        "section1-p section1-p section1-p"
+        "section2-p section2-p section2-p"
+        "section3-p section3-p section3-p"
+        "footer footer footer"
+        ;
+    }
+    .section1-p{
+        align-items: center;
+    }
+    .container-chepromo{
+        width: 20%;
+        height: 10%;
+    }
+    .container-elegi{
+        font-size: 2.5rem;
+    }
+}
+
+/*Maquetando con grid nosotros.html*/
+#grid-container-nosotros{
+    display: grid;
+    /*Mobile first*/
+    grid-template-areas: 
+    "header"
+    "nav"
+    "section1-n"
+    "footer"
+    ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 3% 80% auto;
+    width: 100%;
+    height: auto;
+    font-family: 'Spartan',sans-serif;
+}
+/*defino nuevo section*/
+.section1-n{
+    grid-area: section1-n;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    background-color: #FBF3E6;
+}
+.contenedor-n{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    width: 90%;
+    color: #252525;
+}
+.border-verde{
+    border-top: 2px solid #006847;
+    border-bottom: 2px solid #006847;
+}
+.imagen-tamaño{
+    width: 100%;
+}
+.lorem-estilo{
+    padding: 2%;
+}
+
+/*Responsive*/
+/*1° Tablet:2 columnas 3 filas*/
+@media screen and (min-width:768px) {
+    #grid-container-nosotros{
+        height: 100vh !important;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 15% 80% auto;
+        grid-template-areas: 
+        "nav header"
+        "section1-n section1-n"
+        "footer footer"
+        ;
+    
+    }
+    .section1-n{
+        flex-direction: row;
+    }
+    .contenedor-n{
+        width: 60%;
+    }
+}
+
+/*2° Desktop:3 columnas 3 filas*/
+@media screen and (min-width:1200px) {
+    #grid-container-nosotros{   
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 15% 80% auto;
+        grid-template-areas:
+        "nav header header"
+        "section1-n section1-n section1-n"
+        "footer footer footer"
+        ;
+    }
+    .contenedor-n{
+        width: 35%;
+    }
+}
