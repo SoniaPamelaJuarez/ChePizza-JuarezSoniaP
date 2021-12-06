@@ -572,14 +572,8 @@ section.section3{
 }
 .np-tamaño{
     width: 50%;
-    /*Transicion*/
-    transition-property: all;
-    transition-duration: 1s;
-    transition-timing-function: linear;
 }
-.np-tamaño:hover{
-    width: 60%;
-}
+
 .linea{
     background-color: #FBF3E6;
     width: 50%;
