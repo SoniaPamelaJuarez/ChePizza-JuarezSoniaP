@@ -4,8 +4,12 @@
 }
 /*Comienzo estilos para paginas maquetadas con BT*/
 body{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
     font-family: 'Open Sans', sans-serif;
-    background-color: #FFC61A;
+    background-color: #FBF3E6;
 }
 /*Ajuste navegadores*/
 html { 
@@ -13,53 +17,107 @@ html {
     -webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS. */ 
     }
 
-/*Estilos del NavBar*/
-.fondo-amarillo{
-    background-color: rgb(255,198,26,.8) !important;
-    border-left: 3px solid #B51622;
+/*Estilos de Header*/
+/*Maquetación del Header con Grid Layout*/
+#header-grid-container{
+    display: grid;
+    /*Mobile first*/
+    grid-template-areas: 
+    "header-logo"
+    "header-gourmet"
+    "header-navBar"
+    ;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    width: 100%;
+    height: auto;
 }
-.nav-misestilos{
-    background-color: rgb(255,198,26) !important;
-    font-weight: 400;
-    font-size: 0.9rem;
-    color: #252525;
-    text-decoration: none;
-}
-.miestilo-cp{
-    font-weight: 400;
-    font-size: 0.9rem;
-    color: #252525;
-}
-.miestilo-cp:hover{
-    background-color: inherit;
-}
-.dropdown-item:active{
-    color: #FBF3E6;
-}
-.menu-estilo{
-    color: #252525 !important;
-}
-.menu-estilo:hover{
-    color: inherit !important;
-}
-/*Hover para la barra de navegación*/
-nav a:hover{
-    border-bottom: 3px solid #B51622;
-}
-
-/*Estilos header*/
-.imagen-header{
-    width: 30% !important;
+/*Defino áreas de la grilla*/
+.header-logo{
+    grid-area: header-logo;
+    background-color: #FFC61A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1%;
 }
-.bg-amarillo{
+.header-gourmet{
+    grid-area: header-gourmet;
     background-color: #FFC61A;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 1%;
+}
+.header-navBar{
+    grid-area: header-navBar;
+    background-color: #FFC61A;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+}
+.header-tamaño-img{
+    width: 40%;
+}
+a{
+    text-decoration: none;
+    color: #252525;
+}
+/*Barra de navegación 1 y 2*/
+.navBar2{
+    visibility: hidden;
+}
+.mi-estilo-dropdownMenu{
+    background-color: rgb(255,198,26);
+    color: #252525;
+    font-style: italic;
+}
+.dropdown-item:active{
+    background-color: inherit;
+    color: #B51622;
+}
+.dropdown-item:hover{
+    border-bottom: 2px solid rgb(181,22,34,.5);
+    background-color: inherit;
+}
+.btn{
+    color: #252525;
+}
+.btn-secondary{
+    background-color: inherit;
+    border-color: inherit;
+    border: inherit;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.btn-secondary:active{
+    background-color: inherit;
+    color: #B51622;
+}
+.btn-secondary:focus{
+    box-shadow: inherit;
+    background-color: inherit;
+    border-color: inherit;
+    color: #252525;
+}
+.btn-secondary:hover{
+    background-color: inherit;
+    color: #252525;
+    box-shadow: 0 0 0 0.25rem rgb(181,22,34,.5);
+}
+.btn-secondary:active:focus{
+    box-shadow: none;
+    box-shadow: 0 0 0 0.25rem rgb(181,22,34,.5);
+    color: #B51622;
 }
 
+/*Estilos section 2*/
 /*Video + slogan*/
-section.section1{
+.section1{
     background-color: #FBF3E6;
     width: 100%;
+    height: auto;
     overflow: hidden;
 }
 .video-container{
@@ -73,62 +131,126 @@ section .container-fluid{
     padding-right: 0;
     padding-left: 0;
 }
+.container-slogan{
+    position: absolute;
+    width: 40%;
+    z-index: 1;
+    padding: 1%;
+    background-color: #B51622;
+    margin-left: 2%;
+}
+.slogan-h1-1{
+    font-family: 'Yellowtail', cursive;
+    color: #FBF3E6;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+.slogan-h1-2{
+    color: #B51622;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: #FFC61A;
+    text-align: center;
+}
+.slogan-h1-3{
+    color: #FFC61A;
+    font-weight: 800;
+    font-size: 1.2rem;
+    text-align: center;
+}
 
 /*Estilos para carousel de fotos*/
-.carousel-item img{
-    width: 40% !important;
-    height: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.color-carousel{
+.section2{
     background-color: #FBF3E6;
-}
-.carousel-item{
-    background-color: #FBF3E6;
+    width: 100%;
+    height: 20%;
+    overflow: hidden;
 }
 
-/*Estilos de seccion Nosotros*/
-section.section3{
-    background-color: #B51622;
-    padding: 2%;
+/*Estilos sección 3:About Us*/
+/*Defino grilla para la section 3*/
+.section3{
+    display: grid;
+    grid-template-areas: 
+    "img-pizza nav-foto"
+    ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    overflow: hidden;
 }
+/*Defino áreas de la grilla de la section 3*/
+.img-pizza{
+    grid-area: img-pizza;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+.nav-foto{
+    grid-area: nav-foto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+/*Continiuo con los estilos de section 3*/
 .pizza-container{
-    width: 30%;
+    width: 60%;
 }
 .tamaño-pizza{
     width: 100%;
-    border: 1px solid #FBF3E6;
 }
 .Gourmet-container{
-    width: 20%;     
-    color: #FBF3E6;
+    width: 80%;     
+    color: #B51622;
+    font-family: 'Yellowtail', cursive;
+    text-align: center;
 }
 .tamaño-letra{
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 700;
 }
 .nos-container{
     width: 35%;
-    background-color: #FBF3E6;
     height: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #B51622;
+    font-family: 'Yellowtail', cursive;
+    font-weight: 700;
+    text-align: center;
+}
+.nos-container:hover{
+    background-color: #FBF3E6;
+    border: 2px solid #B51622;
 }
 .nav_nos{
     text-decoration: none;
-    color: #B51622;
+    color: #FBF3E6;
+}
+.nav_nos:hover{
+    color: #B51622 !important;
 }
 .tamaño-nos{
     font-size: 1rem;
 }
+.porcion-container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.estilo-porcion{
+    width: 30%;
+    opacity: 0.3;
+}
 /*Estilos footer*/
 .footer{
     background-color: #FFC61A;
+    width: 100%;
     margin: 0;
     padding: 0;
+    height: 20%;
 }
 .form-container{
     width: 50%;
@@ -169,6 +291,137 @@ section.section3{
     padding-bottom: 0;
 }
 
+/*Media queris para mobile mas pequeños*/
+@media screen and (max-width:485px){
+    /*Estilos header*/
+    .header-tamaño-img{
+        width: 40%;
+    }
+    .header-gourmet{
+        justify-content: center;
+        align-items: center;
+    }
+}
+/*Media queris tablet*/
+@media screen and (min-width:576px){
+    /*Estilos Header*/
+    #header-grid-container{
+        display: grid;
+        grid-template-areas: 
+        "header-navBar header-logo header-gourmet"
+        ;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+    /*Estilos Header*/
+    .navBar2{
+        visibility: visible;
+    }
+    .navBar1{
+        visibility: hidden;
+    }
+    a{
+        font-size: 0.8rem;
+    }
+    a:hover{
+        color: #252525;
+    }
+    .btn-secondary{
+        font-size: 0.8rem;
+    }
+    /*Estilos section 2*/
+    .container-slogan{
+        width: 30%;
+    }
+    .slogan-h1-1{
+        font-size: 2rem;
+    }
+    .slogan-h1-2{
+        font-size: 1.2rem;
+    }
+    .slogan-h1-3{
+        font-size: 1.4rem;
+    }
+    /*Estilos section 3*/
+    .tamaño-letra{
+        font-size: 2rem;
+    }
+    .nos-container{
+        width: 25%;
+    }
+    .tamaño-nos{
+        font-size: 1.5rem;
+    }
+    .estilo-porcion{
+        width: 40%;
+        opacity: 0.3;
+    }
+    .Gourmet-container{
+        margin-left: 8%;
+    }    
+}
+/*Media queris Desktop*/
+@media screen and (min-width:992px){
+    /*Estilos Header*/
+    a{
+        font-size: 1.2rem;
+    }
+    .btn-secondary{
+        font-size: 1.2rem;
+    }
+    /*Estilos section 2*/
+    .container-slogan{
+        width: 25%;
+    }
+    .slogan-h1-1{
+        font-size: 2rem;
+    }
+    .slogan-h1-2{
+        font-size: 1.5rem;
+    }
+    .slogan-h1-3{
+        font-size: 1.7rem;
+    }
+    /*Estilos section 3*/
+    .tamaño-letra{
+        font-size: 3rem;
+    }
+    .pizza-container{
+        width: 40%;
+    }
+    .nos-container{
+        width: 20%;
+        height: 10%;
+    }
+    .tamaño-nos{
+        font-size: 1rem;
+    }   
+}
+/*Media queris Desktop grande*/
+@media screen and (min-width:1200px){
+    /*Estilos section 2*/
+    .container-slogan{
+        width: 25%;
+    }
+    .slogan-h1-1{
+        font-size: 3.5rem;
+    }
+    .slogan-h1-2{
+        font-size: 2rem;
+    }
+    .slogan-h1-3{
+        font-size: 2.2rem;
+    }
+    .tamaño-letra{
+        font-size: 4rem;
+    }
+    .estilo-porcion{
+        width: 50%;
+    }
+}
+
+
+/*Estilos de otras paginas*/
 /*Estilos pagina nosotros*/
 .nosotros{
     background-color: #FBF3E6;
@@ -223,14 +476,16 @@ section .container{
     background-color: #FBF3E6;
 }
 .estilos-np{
-    background-color: #B51622;
-    color: #FBF3E6;
+    border-bottom: 2px solid #B51622;
+    color: #B51622;
     text-align: center;
     padding-top: 2%;
     padding-bottom: 2%;
 }
 .np-textos{
     color: #B51622;
+    font-size: 2.5rem;
+    font-family: 'Yellowtail', cursive;
     font-weight: 700;
     text-align: center;
 }
@@ -252,50 +507,6 @@ section .container{
 .tamaño-cp{
     width: 30%;
 }
-/*Media queris tablet*/
-@media screen and (min-width:576px){
-    .tamaño-letra{
-        font-size: 2rem;
-    }
-    .nos-container{
-        width: 25%;
-        height: 20%;
-    }
-    .tamaño-nos{
-        font-size: 1.5rem;
-    }    
-}
-/*Media queris Desktop*/
-@media screen and (min-width:992px){
-    .imagen-header{
-        width: 20% !important;
-    }
-    .nav-misestilos{
-        font-weight: 600;
-        font-size: 1.2rem;
-    }
-    .miestilo-cp{
-        font-weight: 600;
-        font-size: 1.2rem;
-    }
-    .tamaño-letra{
-        font-size: 3rem;
-    }
-    .nos-container{
-        width: 20%;
-        height: 10%;
-    }
-    .tamaño-nos{
-        font-size: 2rem;
-    }   
-}
-/*Media queris Desktop grande*/
-@media screen and (min-width:1200px){
-    .tamaño-letra{
-        font-size: 4rem;
-    }
-}
-/*Fin estilos para la maquetación con BT*/
 
 
 
