@@ -1,0 +1,193 @@
+//Import
+
+@import "grillaHeader";
+
+//Variables
+
+$cero:0;
+$cien:100%;
+$font-1:'Open Sans';
+$font-2:'Yellowtail';
+$color-amarillo: #FFC61A;
+$color-rojo: #B51622;
+$color-blanco: #FBF3E6;
+$color-negro: #252525;
+$borde-rojo: 2px solid rgb(181,22,34,.5);
+$sinColor: inherit;
+$font-size1:1.2rem;
+$font-size2:2.5rem;
+$boton-sombra: 0 0 0 0.25rem rgb(181,22,34,.5);
+
+
+
+//Anidación de la pagina nuestras pizzas
+*{
+    margin: $cero;
+    padding: $cero;
+}
+html{
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+body{
+    width:$cien;
+    height: auto;
+    margin: $cero;
+    font-family: $font-1;
+    background-color: $color-blanco;
+ //Estilos de los navBar compartidos
+    .navBar2{
+        visibility: hidden;
+    }
+    nav{
+        div{
+            .btn{
+                color: $color-negro;
+            }
+            .btn-secondary{
+                background-color: $sinColor;
+                border-color: $sinColor;
+                border:$sinColor;
+                font-weight: 600;
+                font-size:$font-size1;
+                &:active{
+                    background-color: $sinColor;
+                    color: $color-rojo;
+                }
+                &:focus{
+                    box-shadow: $sinColor;
+                    background-color: $sinColor;
+                    border-color: $sinColor;
+                    color: $color-negro;
+                }
+                &:hover{
+                    background-color: $sinColor;
+                    color: $color-negro;
+                    box-shadow: $boton-sombra;
+                }
+                &:active:focus{
+                    box-shadow: none;
+                    box-shadow:$boton-sombra;
+                    color: $color-rojo;
+                }
+                @media screen and (min-width:576px) {
+                    font-size: 0.8rem;
+                }
+                @media screen and (min-width:992px){
+                    font-size: $font-size1;
+                }
+            }
+            .mi-estilo-dropdownMenu{
+                background-color: #FFC61A;
+                color: $color-negro;
+                font-style: italic;
+                li{
+                    a{
+                        text-decoration: none;
+                        color: $color-negro;
+                        &:active{
+                            background-color: $sinColor;
+
+                            color: $color-rojo;
+                        }
+                        &:hover{
+                            border-bottom: $borde-rojo;
+                            background-color: $sinColor;
+                        }
+                    }
+                }
+            }
+        a{
+            text-decoration: none;
+            color: $color-negro;
+            @media screen and (min-width:576px) {
+                font-size: 0.8rem;
+            }
+            &:hover{
+                color: $color-negro;
+            }
+            @media screen and (min-width:992px){
+                font-size: $font-size1;
+            }
+            }
+        }
+    }
+    //Media queris tablet
+    @media screen and (min-width:576px) {
+        .navBar2{
+            visibility: visible;
+        }
+        .navBar1{
+            visibility: hidden;
+        }
+    }
+    //Estilos section
+    section{
+        .estilos-np{
+            border-bottom: $borde-rojo;
+            color: $color-rojo;
+            text-align: center;
+            padding-top: 2%;
+            padding-bottom: 2%;
+        }
+        .np-textos{
+            color: $color-rojo;
+            font-size: $font-size2;
+            font-family: $font-2;
+            font-weight: 700;
+            text-align: center;
+        }
+    }
+    //Estilos footer
+    footer{
+        background-color: $color-amarillo;
+        width: $cien;
+        margin: $cero;
+        padding: $cero;
+        height: 20%;
+        .form-container{
+            width: 50%;
+            margin: 0.5%;
+            color: $color-rojo;
+            font-weight: 700;
+            font-size: $font-size1;
+            text-align: center;
+            padding: 1%;
+        }
+        .caja-mail{
+            width: $cien;
+            background-color: $sinColor;
+            border-bottom: $borde-rojo;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            margin-top: 2%;
+            font-size: $font-size1;
+            padding: 1%;
+            &::placeholder{
+                color: $color-negro;
+                opacity: .8;
+                text-align: center;
+            }
+        }
+        .boton{
+            border-style: none;
+            background-color: $sinColor;
+            border-bottom: $borde-rojo;
+            margin-top: 2%;
+            color: $color-rojo;
+            font-size: $font-size1;
+            font-weight: 600;
+            &:hover{
+                font-size: 1.3rem;
+            }
+        }
+        .c-p{
+            padding: 1%;
+            color: $color-rojo;
+            font-weight: 500;
+        }
+    }
+}
+
+

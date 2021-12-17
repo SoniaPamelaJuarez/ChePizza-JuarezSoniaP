@@ -55,7 +55,6 @@ html {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-
 }
 .header-tamaño-img{
     width: 40%;
@@ -111,6 +110,7 @@ a{
     box-shadow: 0 0 0 0.25rem rgb(181,22,34,.5);
     color: #B51622;
 }
+
 
 /*Estilos section 2*/
 /*Video + slogan*/
@@ -484,7 +484,7 @@ section .container{
 }
 .np-textos{
     color: #B51622;
-    font-size: 2.5rem;
+    font-size: 2.5;
     font-family: 'Yellowtail', cursive;
     font-weight: 700;
     text-align: center;
