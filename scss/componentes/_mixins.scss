@@ -1,0 +1,7 @@
+//Creo un mixin con varios parámetros
+
+@mixin disposicion-elementos ($display,$justify,$align) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+}

@@ -1,0 +1,218 @@
+header {
+    display: grid;
+    grid-template-areas: "header-logo" "header-gourmet" "header-navBar";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    width: 100%;
+    height: auto;
+  }
+  header .header-logo {
+    grid-area: header-logo;
+    background-color: #FFC61A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+  }
+  header .header-logo img {
+    width: 40%;
+  }
+  header .header-gourmet {
+    grid-area: header-gourmet;
+    background-color: #FFC61A;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 1%;
+  }
+  @media screen and (max-width: 485px) {
+    header .header-gourmet {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  header .header-gourmet img {
+    width: 40%;
+  }
+  header nav {
+    grid-area: header-navBar;
+    background-color: #FFC61A;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  @media screen and (min-width: 576px) {
+    header {
+      display: grid;
+      grid-template-areas: "header-navBar header-logo header-gourmet";
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto;
+    }
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  body {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    font-family: "Open Sans";
+    background-color: #FBF3E6;
+  }
+  body .navBar2 {
+    visibility: hidden;
+  }
+  body nav div .btn {
+    color: #252525;
+  }
+  body nav div .btn-secondary {
+    background-color: inherit;
+    border-color: inherit;
+    border: inherit;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  body nav div .btn-secondary:active {
+    background-color: inherit;
+    color: #B51622;
+  }
+  body nav div .btn-secondary:focus {
+    box-shadow: inherit;
+    background-color: inherit;
+    border-color: inherit;
+    color: #252525;
+  }
+  body nav div .btn-secondary:hover {
+    background-color: inherit;
+    color: #252525;
+    box-shadow: 0 0 0 0.25rem rgba(181, 22, 34, 0.5);
+  }
+  body nav div .btn-secondary:active:focus {
+    box-shadow: none;
+    box-shadow: 0 0 0 0.25rem rgba(181, 22, 34, 0.5);
+    color: #B51622;
+  }
+  @media screen and (min-width: 576px) {
+    body nav div .btn-secondary {
+      font-size: 0.8rem;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    body nav div .btn-secondary {
+      font-size: 1.2rem;
+    }
+  }
+  body nav div .mi-estilo-dropdownMenu {
+    background-color: #FFC61A;
+    color: #252525;
+    font-style: italic;
+  }
+  body nav div .mi-estilo-dropdownMenu li a {
+    text-decoration: none;
+    color: #252525;
+  }
+  body nav div .mi-estilo-dropdownMenu li a:active {
+    background-color: inherit;
+    color: #B51622;
+  }
+  body nav div .mi-estilo-dropdownMenu li a:hover {
+    border-bottom: 2px solid rgba(181, 22, 34, 0.5);
+    background-color: inherit;
+  }
+  body nav div a {
+    text-decoration: none;
+    color: #252525;
+  }
+  @media screen and (min-width: 576px) {
+    body nav div a {
+      font-size: 0.8rem;
+    }
+  }
+  body nav div a:hover {
+    color: #252525;
+  }
+  @media screen and (min-width: 992px) {
+    body nav div a {
+      font-size: 1.2rem;
+    }
+  }
+  @media screen and (min-width: 576px) {
+    body .navBar2 {
+      visibility: visible;
+    }
+    body .navBar1 {
+      visibility: hidden;
+    }
+  }
+  body section .estilos-np {
+    border-bottom: 2px solid rgba(181, 22, 34, 0.5);
+    color: #B51622;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+  body section .np-textos {
+    color: #B51622;
+    font-size: 2.5rem;
+    font-family: "Yellowtail";
+    font-weight: 700;
+    text-align: center;
+  }
+  body footer {
+    background-color: #FFC61A;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 20%;
+  }
+  body footer .form-container {
+    width: 50%;
+    margin: 0.5%;
+    color: #B51622;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1%;
+  }
+  body footer .caja-mail {
+    width: 100%;
+    background-color: inherit;
+    border-bottom: 2px solid rgba(181, 22, 34, 0.5);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 2%;
+    font-size: 1.2rem;
+    padding: 1%;
+  }
+  body footer .caja-mail::placeholder {
+    color: #252525;
+    opacity: 0.8;
+    text-align: center;
+  }
+  body footer .boton {
+    border-style: none;
+    background-color: inherit;
+    border-bottom: 2px solid rgba(181, 22, 34, 0.5);
+    margin-top: 2%;
+    color: #B51622;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  body footer .boton:hover {
+    font-size: 1.3rem;
+  }
+  body footer .c-p {
+    padding: 1%;
+    color: #B51622;
+    font-weight: 500;
+  }
+  

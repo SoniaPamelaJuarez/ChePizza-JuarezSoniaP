@@ -1,14 +1,7 @@
-//Variables
-$cero:0;
-$cien:100%;
-$font-1:'Open Sans';
-$font-2:'Yellowtail';
-$color-amarillo: #FFC61A;
-$color-rojo: #B51622;
-$color-blanco: #FBF3E6;
-$color-negro: #252525;
-$borde-rojo: 1px solid #B51622;
-
+//Import
+@import "../scss/componentes/variables";
+@import "../scss/componentes/listas";
+@import "../scss/componentes/mixins";
 //Maquetación del header con grid layout
 header{
     display: grid;
@@ -24,10 +17,8 @@ header{
     height: auto;
     .header-logo{
         grid-area: header-logo;
-        background-color: $color-amarillo;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        background-color: nth($colores,1);
+        @include disposicion-elementos (flex,center,center);
         padding: 1%;
         img{
             width: 40%;
@@ -35,10 +26,8 @@ header{
     }
     .header-gourmet{
         grid-area: header-gourmet;
-        background-color: $color-amarillo;
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
+        background-color: nth($colores,1);
+        @include disposicion-elementos (flex,flex-end,flex-end);
         padding: 1%;
         @media screen and (max-width: 485px){
             justify-content: center;
@@ -50,10 +39,8 @@ header{
     }
     nav{
         grid-area: header-navBar;
-        background-color: $color-amarillo;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-end;
+        background-color: nth($colores,1);
+        @include disposicion-elementos (flex,flex-start,flex-end);
     }
     @media screen and (min-width:576px){
         display: grid;

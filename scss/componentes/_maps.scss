@@ -1,0 +1,11 @@
+@import "listas";
+@import "variables";
+//Agrego un map
+$nombrePizzas:(
+    color1:nth($colores,2),
+    color2:nth($colores,5),
+    tamaño: $font-size2,
+    familia: $font-2,
+    peso: 700,
+    centro: center,
+)
