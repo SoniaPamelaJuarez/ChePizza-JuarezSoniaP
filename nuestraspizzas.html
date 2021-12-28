@@ -23,9 +23,8 @@
         <title>Che Pizzas: Las mejores pizzas de Cancún</title>
     </head>
 <body>
-    <!--Maquetando nuestras pizzas con BT-->
     <!--Header con NavBar + Logo + Imagen de Pizza Gourmet-->
-    <header>
+    <header id="header-grid-container">
         <!--Logo-->
         <div class="header-logo">
             <img class="header-tamaño-img" src="assets/img/CHEP-LOGO-tamaño.png" alt="Logo">
@@ -53,8 +52,8 @@
 
         <!--Barra de navegacion 2 para tablet/desktop con BT-->
         <nav class="header-navBar navBar2">
-            <div class="d-flex">
-                <img data-aos="flip-left" src="assets/img/icono pizza.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+          <div class="d-flex sticky">
+            <img data-aos="flip-left" src="assets/img/icono pizza.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
             <button class="btn btn-secondary" type="button" aria-expanded="false">
             <a href="index.html">HOME</a>
             </button>
@@ -71,51 +70,63 @@
             <button class="btn btn-secondary" type="button" aria-expanded="false">
             <a href="promociones.html">PROMOCIONES</a>
             </button>
-            </div>
+          </div>
         </nav>
     </header>
     <!--Fin de Header-->
-
-    <section>
-        <div class="container-fluid estilos-np">
+    <!--Sección de Nuestras Pizzas-->
+    <section class="nuestrasPizzas">
+        <div class="contenedor-titulo">
         <h1>NUESTRAS CHE PIZZAS</h1>
         </div>
-        <div class="container-fluid">
-            <div class="container">
-                <h2 class="np-textos1">Mozzarella</h2>
-                <img data-aos="flip-left" class="w-30 img-fluid rounded mx-auto d-block" src="./assets/img/cuattro-quesos.png" alt="1">
+        <div class="contenedor-principal">
+            <div class="contenedor-textos-pizzas">
+                <h2 class="np-textos">5 Quesos y chistorra</h2>
+                <img data-aos="flip-left"  src="./assets/img/5-quesos-y-chistorra.png" alt="1">
             </div> 
-            <div class="container">
-                <h2 class="np-textos2">Pepperoni</h2>
-                <img data-aos="flip-left" class="w-30 img-fluid rounded mx-auto d-block"  src="./assets/img/cuattro-quesos.png" alt="1">
+            <div class="contenedor-textos-pizzas">
+                <h2 class="np-textos">Carnes frías</h2>
+                <img data-aos="flip-left" src="./assets/img/carnes-frias.png" alt="1">
             </div>
-            <div class="container">
-                <h2 class="np-textos1">Napolitana</h2>
-                <img data-aos="flip-left" class="w-30 img-fluid rounded mx-auto d-block"  src="./assets/img/cuattro-quesos.png" alt="1">
+            <div class="contenedor-textos-pizzas">
+                <h2 class="np-textos">Napolitana</h2>
+                <img data-aos="flip-left"  src="./assets/img/napolitana.png" alt="1">
+            </div>
+            <div class="contenedor-textos-pizzas">
+                <h2 class="np-textos">Funghi con tocino</h2>
+                <img data-aos="flip-left"  src="./assets/img/funghi-con-tocino.png" alt="1">
+            </div>
+            <div class="contenedor-textos-pizzas">
+                <h2 class="np-textos">Pepperoni</h2>
+                <img data-aos="flip-left" src="./assets/img/pepperoni.png" alt="1">
+            </div>
+            <div class="contenedor-textos-pizzas">
+                <h2 class="np-textos">Jamón y Morrones</h2>
+                <img data-aos="flip-left" src="./assets/img/jamon-y-morrones.png" alt="1">
             </div>
         </div>
     </section>
-    
-
     <!--Footer-->
-    <footer>
-        <div class="container-fluid m-p-0">
-            <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-12 d-flex justify-content-between align-items-end">
-                    <div class="form-container">
-                        <form action="">
-                            <label>¡Subscribite para CHE PROMOS EXCLUSIVAS!</label>
-                            <input class="caja-mail" type="email" name="subscribite-para-mas-promociones" placeholder="Tu e-mail aquí ..." required>
-                            <input class="boton" type="button" value="ENVIAR">
-                        </form>
-                    </div>
-                    <div class="c-p">
-                        &copy; CHE PIZZA 2021
-                    </div>
-                </div>
-            </div>
+    <footer class="footer">
+        <div class="disposicion-footer">
+          <div class="form-container">
+            <form action="">
+                <label>¡Subscribite para CHE PROMOS EXCLUSIVAS!</label>
+                <input class="caja-mail" type="email" name="subscribite-para-mas-promociones" placeholder="Tu e-mail aquí ..." required>
+                <input class="boton" type="button" value="ENVIAR">
+            </form>
+          </div>
+          <div class="redes">
+            <a href="nuestraspizzas.html"><img src="assets/img/FLECHA.png" alt=""></a>
+            <a href="https://www.facebook.com/ChePizzaOk/" target="_blank"><img src="assets/img/FACE.png" alt=""></a>
+            <a href="https://www.instagram.com/chepizzaok/" target="_black"><img src="assets/img/INSTAGRAM.png" alt=""></a>
+          </div>
+          <div>
+            &#9426 CHE PIZZA 2021
+          </div>
         </div>
-    </footer>
+        <a href="https://wa.me/9983861494" target="_blank" class="boton-wsp"><img src="assets/img/wsp.svg" alt="wsp"></a>
+      </footer>
     <!--JavaScript Animaciones AOS-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
     </script>

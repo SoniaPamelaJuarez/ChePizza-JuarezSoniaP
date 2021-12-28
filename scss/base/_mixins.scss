@@ -1,0 +1,21 @@
+//Creo un mixin con varios parámetros
+
+@mixin disposicion-elementos ($display,$justify,$align) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin disposicion-textos($color,$size,$weigth,$bg-color,$align,$fuente){
+    color: $color;
+    font-size: $size;
+    font-weight: $weigth;
+    background-color: $bg-color;
+    text-align: $align;
+    font-family: $fuente;
+}
+@mixin tamaños($width,$height,$padding,$margin){
+    width: $width;
+    height: $height;
+    padding: $padding;
+    margin: $margin;
+}

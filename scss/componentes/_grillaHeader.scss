@@ -1,7 +1,7 @@
 //Import
-@import "../scss/componentes/variables";
-@import "../scss/componentes/listas";
-@import "../scss/componentes/mixins";
+@import "../base/variables";
+@import "../base/listas";
+@import "../base/mixins";
 //Maquetación del header con grid layout
 header{
     display: grid;

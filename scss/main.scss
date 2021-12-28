@@ -1,20 +1,22 @@
 //Import
 
-@import "grillaHeader";
-@import "../scss/componentes/variables";
-@import "../scss/componentes/listas";
-@import "../scss/componentes/mixins";
-@import "../scss/componentes/extends";
-@import "../scss/componentes/maps";
+@import "../scss/componentes/grillaHeader";
+@import "../scss/base/variables";
+@import "../scss/base/extends";
+@import "../scss/base/mixins";
+@import "../scss/base/listas";
+@import "../scss/base/maps";
+@import "../scss/componentes/grilla-index";
+@import "../scss/componentes/contacto";
+@import "../scss/componentes/nuestras-pizzas";
+@import "../scss/componentes/promociones";
+@import "../scss/componentes/nosotros";
 
 
-
-
-
-//Anidación de la pagina nuestras pizzas
 *{
     margin: $cero;
     padding: $cero;
+    box-sizing: border-box;
 }
 html{
     line-height: 1.15;
@@ -70,6 +72,7 @@ body{
                 background-color: #FFC61A;
                 color: nth($colores,4);
                 font-style: italic;
+                z-index: 99;
                 li{
                     a{
                         text-decoration: none;
@@ -102,6 +105,10 @@ body{
     }
     //Media queris tablet
     @media screen and (min-width:576px) {
+        .sticky{
+            position: fixed;
+            z-index: 5;
+        }
         .navBar2{
             visibility: visible;
         }
@@ -135,34 +142,40 @@ body{
     }
     //Estilos footer
     footer{
+        @include tamaños ($cien,20%,20px,0);
         background-color: nth($colores,1);
-        width: $cien;
-        margin: $cero;
-        padding: $cero;
-        height: 20%;
+        .disposicion-footer{
+            @include disposicion-elementos(flex,space-around,center);
+            flex-wrap: wrap;
+            flex-direction: column;
+            @media screen and (min-width:992px) {
+                flex-direction: row;
+                align-items: flex-end;
+                justify-content: space-between;
+            }
+        }
         .form-container{
-            width: 50%;
-            margin: 0.5%;
-            color: nth($colores,2);
-            font-weight: 700;
-            font-size: $font-size1;
-            text-align: center;
-            padding: 1%;
+            @include tamaños ($cien,20%,0,0);
+            @include disposicion-textos(nth($colores,2),$font-size1,700,nth($colores,1),center,$font-1);
+            @media screen and(min-width:992px){
+                width: 50%;
+            }
         }
         .caja-mail{
-            width: $cien;
-            background-color: $sinColor;
+            @include disposicion-textos(nth($colores,2),$font-size1,700,$sinColor,center,$font-1);
+            @include tamaños (90%,auto,0,0);
             border-bottom: $borde-rojo;
             border-top: none;
             border-left: none;
             border-right: none;
-            margin-top: 2%;
-            font-size: $font-size1;
-            padding: 1%;
+            margin-top: 5px;
             &::placeholder{
                 color: nth($colores,4);
                 opacity: .8;
                 text-align: center;
+            }
+            @media screen and(min-width:992px){
+                width: $cien;
             }
         }
         .boton{
@@ -181,6 +194,42 @@ body{
             padding: 1%;
             color: nth($colores,2);
             font-weight: 500;
+        }
+        .redes{
+            img{
+                width: 30px;
+                margin-top: 20px;
+                margin-bottom: 5px;
+                margin-left: 10px;
+                &:hover{
+                    width: 31px;
+                }
+                @media screen and(min-width:992px){
+                    width: 40px;
+                    &:hover{
+                        width: 41px;
+                    }
+                }
+            }
+        }
+        .boton-wsp{
+            display: block;
+            position: fixed;
+            @include tamaños(40px,40px,0,0);
+            bottom: 10px;
+            right: 10px;
+            z-index: 99;
+            & :hover {
+                @include tamaños (45px,45px,0,0);
+            }
+            @media screen and (min-width:576px){
+                @include tamaños (80px,auto,0,0);
+                bottom: 40px;
+                right: 40px;
+                & :hover {
+                    @include tamaños (90px,90px,0,0);
+                }
+            }
         }
     }
 }

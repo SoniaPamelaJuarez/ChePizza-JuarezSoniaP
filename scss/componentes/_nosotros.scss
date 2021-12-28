@@ -1,0 +1,121 @@
+//Imports
+@import "../base/variables";
+@import "../base/listas";
+@import "../base/mixins";
+
+//Anidamiento Página contacto
+.nosotros{
+    background-color: nth($colores,3);
+    @include tamaños ($cien,auto,0,0);
+    @include disposicion-elementos(flex,space-around,center);
+    flex-direction: column;
+    h1{
+        @include disposicion-textos(nth($colores,4),1.5rem,700,inherit,center,$font-1);
+        padding: 0.5em;
+        border-top: 3px solid #006847;
+        border-bottom: 3px solid #006847;
+        @media screen and (min-width:576px){
+            font-size: 1.5rem;
+        }
+        @media screen and (min-width:992px) {
+            font-size: 2rem;
+        }
+    }
+    .contenedor1{
+        @include disposicion-elementos(flex,space-between,center);
+        @media screen and (min-width:576px){
+            flex-direction: row;
+        }
+        flex-direction: column;
+        margin-top: 20px;
+        img{
+            @include tamaños(70%,auto,0,0);
+            @media screen and (min-width:576px){
+                width: 60%;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+            @media screen and (min-width:992px) {
+                width: 50%;
+            }
+        }
+        .disposicion-texto1{
+            width: 80%;
+            text-align: justify;
+            @include disposicion-elementos(flex,center,center);
+            flex-direction: column;
+            @media screen and (min-width:576px){
+                margin-left: 20px;
+                margin-right: 20px;
+                font-size: 1rem;
+            }
+            @media screen and (min-width:992px) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .reversa{
+        @media screen and (min-width:576px){
+            flex-direction: row-reverse
+        }
+    }
+    .contenedor3{
+        width: 80%;
+        @include disposicion-elementos(flex,space-between,center);
+        flex-direction: column;
+        margin-top: 20px;
+        @media screen and (min-width:576px) {
+            width: $cien;
+        }
+        img{
+            @include tamaños(80%,auto,0,0);
+            margin-bottom: 20px;
+            @media screen and (min-width:576px){
+                width: 30%;
+            }
+        }
+        h6{
+            padding: 1em;
+            line-height: 1.5;
+            @media screen and (min-width:992px) {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+        }
+    }
+    .disposicion-texto3{
+        margin-bottom: 10px;
+        margin-top: 20px;
+        .dropdown{
+            margin:10px
+        }
+        .btn-secondary{
+            color:nth($colores,5);
+            font-weight: 600;
+            background-color: nth($colores,3);
+            border-color: nth($colores,3);
+            &:active{
+                box-shadow: 0 0 0 0.25rem rgb(0, 104, 71);
+            }
+            &:focus{
+                box-shadow: $sinColor;
+                @extend %sincolor;
+                box-shadow: 0 0 0 0.1rem rgb(0, 104, 71,0.8);
+            }
+            @media screen and (min-width:992px) {
+                font-size: 1.2rem;
+            }
+        }
+        .dropdown-menu{
+            background-color: nth($colores,3);
+            border: 1px solid nth($colores,5);
+            padding: 1em;
+            color: nth($colores,4);
+        }
+    }
+    p{
+        @media screen and (min-width:992px) {
+            width: 70%;
+        }
+    }
+}
