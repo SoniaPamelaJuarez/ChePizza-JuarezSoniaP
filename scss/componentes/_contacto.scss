@@ -5,56 +5,55 @@
 
 //Anidamiento página contacto
 body{
-    @include tamaños($cien,auto,0,0);
+    @include tamaños($cien,$cien,0,0);
     .contacto{
-        @include tamaños(90%,auto,0.5em,0.5em);
+        @include tamaños(100%,100%,0,0);
         @include disposicion-elementos(flex,center,center);
         flex-direction: column;
         flex-wrap: wrap;
         .carousel-contacto{
-            @include tamaños ($cien,auto,0,20px);
+            @include tamaños ($cien,auto,0,0);
             img{
                 width: 50%;
             }
         }
         .direccion{
-            @include tamaños (90%,auto,0,0);
+            @include tamaños (100%,500px,20px,0);
             background-color: nth($colores,1);
-            @include disposicion-elementos(flex,space-around,center);
-            flex-direction: column;
-            flex-wrap: wrap;
-            @media screen and (min-width:700px){
+            @include disposicion-elementos(flex,center,center);
             flex-direction: row;
-            }
-            .direcc-texto{
-                @include tamaños(80%,auto,0.5em,0.5em);
-                @media screen and (min-width:700px){
-                width: 30%;
-                }
-                h1{
-                    @include disposicion-textos(nth($colores,2),1.5rem,700,nth($colores,1),center,$font-1);
-                    @media screen and (min-width:700px){
-                    font-size: 2rem;
-                    padding: 0.5em;
-                    }
-                }
-            }
-            .direcc-texto2{
-                @include disposicion-elementos(flex,space-around,center);
-                @include tamaños(80%,auto,0.5em,0.5em);
-                h1{
-                    @include disposicion-textos(nth($colores,2),1rem,700,inherit,center,$font-1);
-                    @media screen and (min-width:700px){
-                    font-size: 1.5rem;;
-                    }
-                }
+            flex-wrap: wrap;
+            .contenedor-direccion{
+                @include disposicion-elementos (flex,center,center);
+                flex-direction: row;
+                @include tamaños (100%,auto,0,0);
                 img{
-                    width: 50px;
+                    width: 30px;
+                }
+                h1{
+                    @include disposicion-textos(nth($colores,2),1.5rem,600,inherit,center,$font-1);
+                    @media screen and (min-width:576px){
+                        font-size: 1.7rem;
+                    }
+                    @media screen and (min-width:800px) {
+                        font-size: 2.3rem;
+                    }
+                }
+            }
+            h6{
+                width: 80%;
+                @include disposicion-textos(nth($colores,4),1rem,500,inherit,center,$font-1);
+            }
+            .mapa{
+                @include tamaños(70%,70%,0,0);
+                iframe{
+                    width: 100%;
+                    height: 100%;
                 }
             }
         }
         .formulario{
-            @include tamaños($cien,auto,0,0);
+            @include tamaños($cien,400px,0,0);
             @include disposicion-elementos(flex, space-around,center);
             flex-direction: column;
             flex-wrap: wrap;
@@ -73,7 +72,7 @@ body{
                         font-size: 1.8rem;
                     }
                     @media screen and (min-width:1100px){
-                        font-size: 2rem;
+                        font-size: 1.8rem;
                     }
                 }
                 @media screen and (min-width:700px){

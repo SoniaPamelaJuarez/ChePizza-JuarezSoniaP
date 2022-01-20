@@ -18,12 +18,46 @@ main{
         @include tamaños($cien,auto,0,0);
         overflow: hidden;
         @include disposicion-elementos(flex,flex-start,center);
+        .video-icon{
+            position: absolute;
+            top:90%;
+            left: 50%;
+            svg{
+                color: nth($colores,1);
+                height: 40px;
+                animation-name: scroll;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+                animation-duration: 1s;
+                animation-delay: 0s;
+                @keyframes scroll {
+                    0%{
+                        transform: translateY(0px);
+                    }
+                    20%{
+                        transform: translateY(12px);
+                    }
+                    40%{
+                        transform: translateY(8px);
+                    }
+                    60%{
+                        transform: translateY(4px);
+                    }
+                    80%{
+                        transform: translateY(12px);
+                    }
+                    100%{
+                        transform: translateY(0px);
+                    }
+                }
+            }
+        }
         .contenedor-video{
-            @include tamaños($cien,$cien,0,0);
+            @include tamaños($cien,90vh,0,0);
             overflow: hidden;
             background-color: nth($colores, 1);
             .video-tamaño{
-                @include tamaños($cien,$cien,0,0);
+                object-fit: cover;
             }
         }
         .posicion{
@@ -42,42 +76,12 @@ main{
             @media screen and (min-width:992px){
                 width: 25%;
             }
-                }
-            .slogan-h1-1{
-                @include disposicion-textos(nth($colores,3),1.5rem,500,nth($colores,2),center,$font-2);
-                @media screen and (min-width:576px){
-                    font-size: 2rem;
-                }
-                @media screen and(min-width:1200px) {
-                    font-size: 3.5rem;
-                }
-            }
-            .slogan-h1-2{
-                @include disposicion-textos(nth($colores,2),1rem,700,nth($colores,1),center,$font-1);
-                @media screen and (min-width:576px){
-                    font-size: 1.2rem;
-                }
-                @media screen and (min-width:992px){
-                    font-size: 1.5rem;
-                }
-                @media screen and(min-width:1200px) {
-                    font-size: 2rem;
-                }
-            }
-            .slogan-h1-3{
-                @include disposicion-textos(nth($colores,1),1.2rem,800,nth($colores,2),center,$font-1);
-                @media screen and (min-width:576px){
-                    font-size: 1.4rem;
-                }
-                @media screen and (min-width:992px){
-                    font-size: 1.7rem;
-                }
-                @media screen and(min-width:1200px) {
-                    font-size: 2.2rem;
-                }
+            .img-slogan{
+                width: 100%;
             }
         }
-    .section2{
+    }
+    #section2{
         background-color: nth($colores,3);
         @include tamaños(100%,auto,0,0);
         overflow: hidden;
@@ -86,32 +90,10 @@ main{
         @include tamaños(100%,auto,0,0);
         background-color: nth($colores,3);
         .estrellas{
-            @include disposicion-elementos (flex,space-around,center);
-            .tamaño-gourmet{
-                @include disposicion-textos(nth($colores,2),1.5rem,700,inherit,center,$font-2);
-                width: 50%;
-                margin-top: 2%;
-                @media screen and (min-width:576px){
-                    font-size: 1.8rem;
-                }
-                @media screen and (min-width:992px){
-                    font-size: 2rem;
-                }
-                @media screen and (min-width:1200px){
-                    font-size: 3rem;
-                }
-            }
+            width: 100%;
+            @include disposicion-elementos(flex,center,center);
             img{
-                @include tamaños(20px,auto,0,0);
-                @media screen and (min-width:576px) {
-                    @include tamaños(30px,auto,1%,5px);
-                }
-                @media screen and (min-width:992px){
-                    width: 40px;
-                }
-                @media screen and (min-width:1200px){
-                    width: 50px;
-                }
+                width: 70%;
             }
         }
         .imagenes-nosotros{
@@ -140,13 +122,14 @@ main{
                 @media screen and (min-width:1200px) {
                     width: 50px;
                 }
-                margin-bottom: 5px;
+                margin-top: 50px;
+                margin-bottom: 50px;
             }
             a{
                 text-decoration: none;
                 @include disposicion-textos(nth($colores,2),1.2rem,700,nth($colores,1),center,$font-1);
-                margin-top: 5px;
-                margin-bottom: 5px;
+                margin-top: 50px;
+                margin-bottom: 50px;
                 border-radius: 5px;
                 padding: 3px;
                 &:hover{

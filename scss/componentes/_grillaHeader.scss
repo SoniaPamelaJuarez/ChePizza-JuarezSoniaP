@@ -27,14 +27,17 @@ header{
     .header-gourmet{
         grid-area: header-gourmet;
         background-color: nth($colores,1);
-        @include disposicion-elementos (flex,flex-end,flex-end);
+        @include disposicion-elementos (flex,flex-end,center);
         padding: 1%;
-        @media screen and (max-width: 485px){
+        @media screen and (max-width: 576px){
             justify-content: center;
             align-items: center;
         }
         img{
-            width: 40%;
+            width: 50%;
+            @media screen and(min-width:576px) {
+                width: 70%;
+            }
         }
     }
     nav{

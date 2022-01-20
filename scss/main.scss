@@ -145,6 +145,7 @@ body{
         @include tamaños ($cien,20%,20px,0);
         background-color: nth($colores,1);
         .disposicion-footer{
+            margin: auto;
             @include disposicion-elementos(flex,space-around,center);
             flex-wrap: wrap;
             flex-direction: column;
@@ -158,7 +159,7 @@ body{
             @include tamaños ($cien,20%,0,0);
             @include disposicion-textos(nth($colores,2),$font-size1,700,nth($colores,1),center,$font-1);
             @media screen and(min-width:992px){
-                width: 50%;
+                width: 40%;
             }
         }
         .caja-mail{
@@ -175,7 +176,7 @@ body{
                 text-align: center;
             }
             @media screen and(min-width:992px){
-                width: $cien;
+                width: 50%;
             }
         }
         .boton{
@@ -196,6 +197,9 @@ body{
             font-weight: 500;
         }
         .redes{
+            @media screen and(min-width:992px){
+                width: 33.3%;
+            }
             img{
                 width: 30px;
                 margin-top: 20px;

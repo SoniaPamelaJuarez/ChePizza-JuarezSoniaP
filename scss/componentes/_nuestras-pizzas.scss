@@ -5,19 +5,18 @@
 
 //Anidamiento de la página nuestras pizzas
 .nuestrasPizzas{
+    @include tamaños($cien,auto,0,0);
     background-color: rgb(181,22,34,.8);
-    .contenedor-titulo{
+    .contenedor-titulo{    
         width: $cien;
         border-bottom: 2px solid nth($colores,3);
         h1{
             @include disposicion-textos (nth($colores,3),2rem,700,inherit,center,$font-1);
             padding: 0.5em;
-            @media screen and(min-width:576px) {
-                font-size: 1.5rem;
-            }
         }
     }
-    .contenedor-principal{
+    .contenedor-card{
+        @include tamaños($cien,auto,20px,0);
         @include disposicion-elementos(flex,space-around,center);
         flex-direction: column;
         flex-wrap: wrap;
@@ -43,16 +42,56 @@
             width: 50%;
         }
         img{
-            width: 80%;
-            @media screen and (min-width:576px) {
-                width: 70%;
+            width: 100%;
+        }
+        .card-father{
+            width:300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: inherit;
+            perspective: 1000px;
+            &:hover .card{
+                transform: rotateY(180deg);
             }
-            @media screen and (min-width:992px) {
-                width: 60%;
+            .card{
+                width: 300px;
+                height: 300px;
+                position: relative;
+                transform-style: preserve-3d;
+                transition: all 600ms;
+                background-color: inherit;
+                border-radius: 50%;
             }
-            @media screen and (min-width:992px) {
-                width: 50%;
+            .card-front,
+            .card-back{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                backface-visibility: hidden;
+                transform-style: preserve-3d;
+                cursor: pointer;
+            }
+            .card-front{
+                @include disposicion-elementos(flex,center,center);
+            }
+            .card-back{
+                transform: rotateY(180deg);
+                @include disposicion-elementos(flex,center,center);
+                background-color: nth($colores, 1);
+                border-radius: 50%;
+                .body-card-back{
+                    width:60%;
+                    text-align: center;
+                    color: nth($colores, 4);
+                    font-weight: 700;
+                    transform:translateZ(60px);
+                    font-size: 1rem;
+                    img{
+                        width: 30px;
+                    }
+                }
             }
         }
+
     }
 }
